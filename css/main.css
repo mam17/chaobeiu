@@ -203,6 +203,8 @@ img {
   text-align: center;
   font-size: 2.4rem;
   border-radius: 10rem;
+  justify-content: space-around;
+  display: flex;
 }
 
 date, time {
