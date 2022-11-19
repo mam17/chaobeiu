@@ -35,7 +35,7 @@ a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white
   z-index: 99;
   position: relative;
   color: #fff;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 70px;
   padding: 0;
   margin: 0;
@@ -62,7 +62,6 @@ a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white
   letter-spacing: 2px;
 }
 
-/* 爱心css */
 canvas {
   position: absolute;
   width: 100%;
@@ -72,10 +71,10 @@ canvas {
 .img {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 40%;
   transform: translate(-50%, -50%);
-  width: 420px;
-  height: 420px;
+  width: 460px;
+  height: 460px;
 }
 
 #pinkboard {
@@ -101,7 +100,6 @@ canvas {
   top: -20px;
 }
 
-/* 星空css */
 html, body {
   padding: 0px;
   margin: 0px;
@@ -177,7 +175,6 @@ a:hover {
   opacity: 1;
 }
 
-/* heart image: https://stackoverflow.com/a/51216413 */
 img {
 
   /* width: 200px; */
@@ -187,4 +184,91 @@ img {
   -webkit-mask-box-image: var(--_m);
   mask-border: var(--_m);
   clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+
+/* thời gian */
+
+#clock-box, #info {
+  grid-column: span 3;
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+#clock-box #clock {
+  grid-column: 4 / 10;
+  background-color: #F8C8C8;
+  padding: .6rem 2rem;
+  padding-top: .8rem;
+  text-align: center;
+  font-size: 2.4rem;
+  border-radius: 10rem;
+}
+
+date, time {
+  display: block;
+}
+
+date {
+  font-size: 18px;
+}
+
+time {
+  font-family: "Arial", sans-serif;
+  line-height: 3.2rem;
+  letter-spacing: 2px;
+}
+
+anni {
+  font-size: 30px;
+  letter-spacing: 0.2px;
+}
+
+#heart {
+  grid-column: span 2;
+  display: grid;
+  grid-template-rows: 2;
+  font-size: 44px;
+  color: #b90d46;
+  align-self: center;
+  padding-bottom: 2.6rem;
+  text-align: center;
+}
+
+#music {
+  grid-column: 2;
+  position: relative;
+  z-index: 1000;
+  opacity: .4;
+}
+
+
+@media (max-width: 992px) {
+  #wrapper {
+        grid-column: span 12;
+  }
+
+  #clock-box #clock {
+        grid-column: 2 / 12;
+  }
+
+  .avt {
+        width: 120px;
+        height: 120px;
+  }
+
+  #info .one, #info .two{
+        grid-column: span 12;;
+  }
+
+  #heart {
+        grid-column: span 12;
+        padding-bottom: 1rem;
+  }
+
+  footer {
+        font-size: 1.2rem;
+        margin: 0;
+        padding-bottom: 2rem;
+  }
 }
