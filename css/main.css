@@ -220,7 +220,7 @@ img {
 #clock-box #clock {
   grid-column: 4 / 10;
   /* background-color: #f8c8c8; */
-  background: url('/image/bautroiu.jpg');
+  background-image: url('../image/bautroiu.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 0.6rem 2rem;
